@@ -1,7 +1,7 @@
 <template>
   <layout description="vue server side render" keywords="egg, vue, webpack, server side render">
     <layout-header></layout-header>
-    <div class="container">{{$t('menu.home')}}</div>
+    <banner></banner>
   </layout>
 </template>
 <style>
@@ -9,9 +9,11 @@
 </style>
 <script type="babel">
 import layoutHeader from "@page/pc/common/header";
+import banner from "./components/banner";
 export default {
   components: {
-    layoutHeader
+    layoutHeader,
+    banner
   },
   data() {
     return {
