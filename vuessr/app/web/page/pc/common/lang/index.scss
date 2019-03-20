@@ -1,0 +1,67 @@
+.lang-menu {
+    position: relative;
+    .lang-current {
+        position: relative;
+        padding:0 24px;
+        line-height: 34px;
+        font-size:12px;
+        &::before{
+            position: absolute;
+            top:10px;
+            left:0;
+            width:16px;
+            height:16px;
+            content: "";
+            background:url(./images/earth.png) no-repeat center center;
+        }
+        &::after {
+            position: absolute;
+            top:10px;
+            right:0;
+            width:16px;
+            height:16px;
+            content: "";
+            background:url(./images/langarrow.png) no-repeat center center;
+        }
+    }
+   .lang-list{
+        position: absolute;
+        top:34px;
+        right: 0;
+        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width:221px;
+        border-top:1px solid #919191;
+        border-right:1px solid #919191;
+        
+   }
+   .lang-item {
+        padding:5px 8px;
+        width: 110px;
+        line-height: 28px;
+        background:#252f40;
+        border-left: 1px solid #919191;
+        border-bottom: 1px solid #919191;
+        color:#fff;
+        font-size: 12px;
+        &:hover {
+            background-color: #364154;
+            color:#3782ff;
+            cursor: pointer;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        .lang-current{
+            &::after{
+                transform: scale(1,-1);
+            }
+        }
+        .lang-list {
+            display: flex;
+        }
+    }
+}
+
+

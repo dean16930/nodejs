@@ -1,5 +1,6 @@
 <template>
   <layout description="vue server side render" keywords="egg, vue, webpack, server side render">
+    <layout-header></layout-header>
     <div class="container">{{$t('menu.home')}}</div>
   </layout>
 </template>
@@ -7,8 +8,11 @@
 @import "./index.scss";
 </style>
 <script type="babel">
+import layoutHeader from "@page/pc/common/header";
 export default {
-  components: {},
+  components: {
+    layoutHeader
+  },
   data() {
     return {
       isFinish: false,
