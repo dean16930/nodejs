@@ -1,10 +1,6 @@
 <template>
   <div class="lang-menu">
-    <div class="lang-current">
-      <span class="menu-icon"></span>
-      <span>中文简体</span>
-      <span class="menu-arrow"></span>
-    </div>
+    <div class="lang-current">{{currentLocale.name}}</div>
     <div class="lang-list">
       <a
         v-for="(item ,key, index) in localesList"
@@ -62,7 +58,7 @@ export default {
   computed: {
     currentLocale: function() {
       let _currentLocale = this.locale ? this.locale : "cn";
-      return this.langList[_currentLocale];
+      return this.localesList[_currentLocale];
     }
   },
   methods: {
